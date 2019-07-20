@@ -10,19 +10,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Words Matching View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WordsMatchingViewController" customModule="Translations_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="words_matching_background" translatesAutoresizingMaskIntoConstraints="NO" id="Dap-vn-Ubv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the flying text to choose the right translation" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-hi-FTy">
+                                <rect key="frame" x="20" y="397.5" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-6w-Yhs">
+                                <rect key="frame" x="20" y="818" width="165.5" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAK-D9-1cZ">
+                                        <rect key="frame" x="16" y="10" width="133.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HAK-D9-1cZ" firstAttribute="top" secondItem="AMc-6w-Yhs" secondAttribute="top" constant="10" id="18X-Yf-li8"/>
+                                    <constraint firstItem="HAK-D9-1cZ" firstAttribute="leading" secondItem="AMc-6w-Yhs" secondAttribute="leading" constant="16" id="QFf-Dg-wxb"/>
+                                    <constraint firstAttribute="trailing" secondItem="HAK-D9-1cZ" secondAttribute="trailing" constant="16" id="Yt5-wR-lr7"/>
+                                    <constraint firstAttribute="bottom" secondItem="HAK-D9-1cZ" secondAttribute="bottom" constant="10" id="fRs-7w-dVi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52j-Lz-Vvi">
+                                <rect key="frame" x="228.5" y="52" width="165.5" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="irw-SR-sXi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Spanish Text">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="spanishTextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIO-JG-3h6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-WG-VJi" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="154.5" y="446" width="105.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dap-vn-Ubv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4UN-Zf-HUt"/>
+                            <constraint firstItem="RIe-hi-FTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8lk-SV-ChH"/>
+                            <constraint firstItem="RIe-hi-FTy" firstAttribute="centerY" secondItem="Dap-vn-Ubv" secondAttribute="centerY" constant="-30" id="CuZ-lQ-o5M"/>
+                            <constraint firstItem="AMc-6w-Yhs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hho-Zd-rgx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="52j-Lz-Vvi" secondAttribute="trailing" constant="20" id="I8X-59-zAx"/>
+                            <constraint firstAttribute="trailing" secondItem="RIe-hi-FTy" secondAttribute="trailing" constant="20" id="Il0-2l-xvf"/>
+                            <constraint firstItem="AMc-6w-Yhs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="4:10" id="MtD-Rh-8RP"/>
+                            <constraint firstItem="AMc-6w-Yhs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PGj-Oq-JpT"/>
+                            <constraint firstAttribute="bottom" secondItem="Dap-vn-Ubv" secondAttribute="bottom" id="QJm-9m-P6B"/>
+                            <constraint firstItem="iDd-WG-VJi" firstAttribute="top" secondItem="RIe-hi-FTy" secondAttribute="bottom" constant="7.5" id="Ral-2h-1Vf"/>
+                            <constraint firstItem="52j-Lz-Vvi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="4:10" id="a5p-wa-5YT"/>
+                            <constraint firstItem="52j-Lz-Vvi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="adF-wA-d1K"/>
+                            <constraint firstItem="iDd-WG-VJi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hff-KZ-y9N"/>
+                            <constraint firstItem="Dap-vn-Ubv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hqH-Z6-Ayv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dap-vn-Ubv" secondAttribute="trailing" id="xQR-Yr-uou"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="englishTextLabel" destination="HAK-D9-1cZ" id="8v3-MN-E4z"/>
+                        <outlet property="spanishTextButton" destination="52j-Lz-Vvi" id="9aB-PZ-OeQ"/>
+                        <outlet property="timerLabel" destination="iDd-WG-VJi" id="Gbi-tr-ReR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="words_matching_background" width="2474" height="2000"/>
+    </resources>
 </document>

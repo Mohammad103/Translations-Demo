@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		9544D07F22E3AA7100DAD2EE /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D07E22E3AA7100DAD2EE /* Word.swift */; };
 		9544D08122E3AA9800DAD2EE /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 9544D08022E3AA9800DAD2EE /* words.json */; };
 		9544D08322E3ABD600DAD2EE /* WordsMatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08222E3ABD600DAD2EE /* WordsMatchingViewModel.swift */; };
+		9544D08522E3B17500DAD2EE /* WordsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08422E3B17500DAD2EE /* WordsMatchingViewController.swift */; };
+		9544D08922E3C68000DAD2EE /* UIViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08822E3C68000DAD2EE /* UIViewUtilities.swift */; };
 		9589E90622E3A7A800B3E88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E90522E3A7A800B3E88D /* AppDelegate.swift */; };
 		9589E90B22E3A7A800B3E88D /* WordsMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90922E3A7A800B3E88D /* WordsMatching.storyboard */; };
 		9589E90D22E3A7A900B3E88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90C22E3A7A900B3E88D /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		9544D07E22E3AA7100DAD2EE /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		9544D08022E3AA9800DAD2EE /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		9544D08222E3ABD600DAD2EE /* WordsMatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewModel.swift; sourceTree = "<group>"; };
+		9544D08422E3B17500DAD2EE /* WordsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewController.swift; sourceTree = "<group>"; };
+		9544D08822E3C68000DAD2EE /* UIViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtilities.swift; sourceTree = "<group>"; };
 		9589E90222E3A7A800B3E88D /* Translations Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Translations Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9589E90522E3A7A800B3E88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9589E90A22E3A7A800B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WordsMatching.storyboard; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		9544D07822E3A91D00DAD2EE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9544D08422E3B17500DAD2EE /* WordsMatchingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -135,6 +140,14 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		9544D08722E3C65F00DAD2EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9544D08822E3C68000DAD2EE /* UIViewUtilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9589E8F922E3A7A800B3E88D = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 			children = (
 				9589E90522E3A7A800B3E88D /* AppDelegate.swift */,
 				9544D07722E3A8FF00DAD2EE /* Words Matching */,
+				9544D08722E3C65F00DAD2EE /* Extensions */,
 				9544D07B22E3A94000DAD2EE /* Assets */,
 			);
 			path = "Translations Demo";
@@ -185,6 +199,7 @@
 				9589E8FE22E3A7A800B3E88D /* Sources */,
 				9589E8FF22E3A7A800B3E88D /* Frameworks */,
 				9589E90022E3A7A800B3E88D /* Resources */,
+				4FF6B4CBE652BADAE3BAC391 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +289,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4FF6B4CBE652BADAE3BAC391 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Translations Demo/Pods-Translations Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Translations Demo/Pods-Translations Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Translations Demo/Pods-Translations Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C2A6C27E05FD447F4B50E856 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +360,8 @@
 				9544D08322E3ABD600DAD2EE /* WordsMatchingViewModel.swift in Sources */,
 				9589E90622E3A7A800B3E88D /* AppDelegate.swift in Sources */,
 				9544D07F22E3AA7100DAD2EE /* Word.swift in Sources */,
+				9544D08522E3B17500DAD2EE /* WordsMatchingViewController.swift in Sources */,
+				9544D08922E3C68000DAD2EE /* UIViewUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

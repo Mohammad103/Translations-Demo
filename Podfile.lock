@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 7797a8438e3f9749495ddac8421746f6bf6cf9b4
+PODS:
+  - CountdownLabel (4.0.1)
+
+DEPENDENCIES:
+  - CountdownLabel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CountdownLabel
+
+SPEC CHECKSUMS:
+  CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
+
+PODFILE CHECKSUM: 33154dbfa12c2a2d5840a57f17f57ad5b5a7dce1
 
 COCOAPODS: 1.7.4
