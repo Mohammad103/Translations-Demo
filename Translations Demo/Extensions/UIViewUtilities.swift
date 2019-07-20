@@ -48,4 +48,10 @@ extension UIView {
         self.layer.add(animation, forKey: "shake")
     }
     
+    
+    func removeAllAnimations() {
+        self.subviews.forEach({$0.layer.removeAllAnimations()})
+        self.layer.removeAllAnimations()
+        self.layoutIfNeeded()
+    }
 }

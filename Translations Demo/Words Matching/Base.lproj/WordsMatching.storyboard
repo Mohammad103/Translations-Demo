@@ -47,15 +47,12 @@
                                 <rect key="frame" x="228.5" y="52" width="165.5" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="irw-SR-sXi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="irw-SR-sXi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <state key="normal" title="Spanish Text">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="spanishTextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIO-JG-3h6"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-WG-VJi" customClass="CountdownLabel" customModule="CountdownLabel">
                                 <rect key="frame" x="154.5" y="446" width="105.5" height="29"/>
@@ -86,6 +83,7 @@
                     <connections>
                         <outlet property="englishTextLabel" destination="HAK-D9-1cZ" id="8v3-MN-E4z"/>
                         <outlet property="spanishTextButton" destination="52j-Lz-Vvi" id="9aB-PZ-OeQ"/>
+                        <outlet property="spanishTextButtonTopConstraint" destination="adF-wA-d1K" id="5Cj-nO-XJ4"/>
                         <outlet property="timerLabel" destination="iDd-WG-VJi" id="Gbi-tr-ReR"/>
                     </connections>
                 </viewController>

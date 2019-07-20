@@ -15,6 +15,7 @@ class WordsMatchingViewController: UIViewController {
     @IBOutlet weak var englishTextLabel: UILabel!
     @IBOutlet weak var spanishTextButton: UIButton!
     @IBOutlet weak var timerLabel: CountdownLabel!
+    @IBOutlet weak var spanishTextButtonTopConstraint: NSLayoutConstraint!
     
     private var viewModel = WordsMatchingViewModel()
     private var floatingAnimationView: JRMFloatingAnimationView!
@@ -24,18 +25,43 @@ class WordsMatchingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spanishTextButton.titleLabel?.lineBreakMode = .byWordWrapping
+        spanishTextButton.titleLabel?.numberOfLines = 0
+        
         timerLabel.animationType = .Evaporate
         timerLabel.countdownDelegate = self
         
         viewModel.delegate = self
         wordsUpdatedSuccessfully()
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        let touchLocation = touch?.location(in: view)
+        if spanishTextButton.layer.presentation()?.hitTest(touchLocation ?? CGPoint.zero) != nil {
+            // This button was hit whilst moving - do something with it here
+            spanishTextButtonTapped()
+        }
+    }
     
     private func setNextSpanishTranslation() {
         DispatchQueue.main.async { [unowned self] in
+            self.view.removeAllAnimations()
+            
+            let animationDuration = 10.0
             self.spanishTextButton.setTitle(self.viewModel.nextWordSpanishTranslation(), for: .normal)
-            self.timerLabel.setCountDownTime(minutes: TimeInterval(5))
+            self.timerLabel.setCountDownTime(minutes: TimeInterval(animationDuration))
             self.timerLabel.start()
+            
+            self.spanishTextButtonTopConstraint.constant = -60.0
+            self.view.layoutIfNeeded()
+            
+            self.spanishTextButtonTopConstraint.constant = self.view.frame.height
+            UIView.animate(withDuration: animationDuration, delay: 0, options: .allowUserInteraction, animations: { [unowned self] in
+                self.view.layoutIfNeeded()
+            }) { completed in
+                // completion logic
+            }
         }
     }
     
@@ -51,20 +77,23 @@ class WordsMatchingViewController: UIViewController {
         floatingAnimationView.animate()
     }
     
-    private func handleRightAnswer() {
+    private func setupFloatingAnimationView() {
         floatingAnimationView = JRMFloatingAnimationView(starting: CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height + 100))
         floatingAnimationView.startingPointWidth = view.frame.size.width
         floatingAnimationView.animationWidth = 75
         floatingAnimationView.maxFloatObjectSize = 75
         floatingAnimationView.minFloatObjectSize = 75
         floatingAnimationView.animationDuration = 3.0
-        floatingAnimationView.maxAnimationHeight = floatingAnimationView.maxAnimationHeight - 64
+        floatingAnimationView.maxAnimationHeight = floatingAnimationView.maxAnimationHeight + 60
         floatingAnimationView.minAnimationHeight = floatingAnimationView.maxAnimationHeight
         floatingAnimationView.removeOnCompletion = true
         floatingAnimationView.add(UIImage(named: "blue_balloon"))
         view.addSubview(floatingAnimationView)
         floatingAnimationTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(animateFloatingAnimationView), userInfo: nil, repeats: true)
-        
+    }
+    
+    private func handleRightAnswer() {
+        setupFloatingAnimationView()
         
         let alertController = UIAlertController(title: nil, message: "Matched! Next word?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { [unowned self] (action) in
@@ -78,7 +107,7 @@ class WordsMatchingViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func spanishTextButtonTapped() {
+    private func spanishTextButtonTapped() {
         timerLabel.cancel()
         if viewModel.isWordsMatched() {
             handleRightAnswer()
