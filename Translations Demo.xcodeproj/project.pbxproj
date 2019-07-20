@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		8799E4A49A07FACE6C13247A /* Pods_Translations_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20DF204ED1DC57D5D4E0CD /* Pods_Translations_Demo.framework */; };
 		9589E90622E3A7A800B3E88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E90522E3A7A800B3E88D /* AppDelegate.swift */; };
-		9589E90822E3A7A800B3E88D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E90722E3A7A800B3E88D /* ViewController.swift */; };
-		9589E90B22E3A7A800B3E88D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90922E3A7A800B3E88D /* Main.storyboard */; };
+		9589E90B22E3A7A800B3E88D /* WordsMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90922E3A7A800B3E88D /* WordsMatching.storyboard */; };
 		9589E90D22E3A7A900B3E88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90C22E3A7A900B3E88D /* Assets.xcassets */; };
 		9589E91022E3A7A900B3E88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90E22E3A7A900B3E88D /* LaunchScreen.storyboard */; };
 		9589E91B22E3A7A900B3E88D /* Translations_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E91A22E3A7A900B3E88D /* Translations_DemoTests.swift */; };
@@ -31,8 +30,7 @@
 		3C83AF0DE1D3433F960DC9B4 /* Pods-Translations Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translations Demo.release.xcconfig"; path = "Target Support Files/Pods-Translations Demo/Pods-Translations Demo.release.xcconfig"; sourceTree = "<group>"; };
 		9589E90222E3A7A800B3E88D /* Translations Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Translations Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9589E90522E3A7A800B3E88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9589E90722E3A7A800B3E88D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9589E90A22E3A7A800B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9589E90A22E3A7A800B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WordsMatching.storyboard; sourceTree = "<group>"; };
 		9589E90C22E3A7A900B3E88D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9589E90F22E3A7A900B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9589E91122E3A7A900B3E88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,8 +81,49 @@
 				9A9239BED51915A78F7B4485 /* Pods-Translations DemoTests.debug.xcconfig */,
 				C34B947D8F4635E60EA40590 /* Pods-Translations DemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9544D07722E3A8FF00DAD2EE /* Words Matching */ = {
+			isa = PBXGroup;
+			children = (
+				9544D07A22E3A93300DAD2EE /* Models */,
+				9544D07922E3A92800DAD2EE /* View Models */,
+				9544D07822E3A91D00DAD2EE /* View Controllers */,
+				9589E90922E3A7A800B3E88D /* WordsMatching.storyboard */,
+			);
+			path = "Words Matching";
+			sourceTree = "<group>";
+		};
+		9544D07822E3A91D00DAD2EE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9544D07922E3A92800DAD2EE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		9544D07A22E3A93300DAD2EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9544D07B22E3A94000DAD2EE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9589E90C22E3A7A900B3E88D /* Assets.xcassets */,
+				9589E90E22E3A7A900B3E88D /* LaunchScreen.storyboard */,
+				9589E91122E3A7A900B3E88D /* Info.plist */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		9589E8F922E3A7A800B3E88D = {
@@ -111,11 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				9589E90522E3A7A800B3E88D /* AppDelegate.swift */,
-				9589E90722E3A7A800B3E88D /* ViewController.swift */,
-				9589E90922E3A7A800B3E88D /* Main.storyboard */,
-				9589E90C22E3A7A900B3E88D /* Assets.xcassets */,
-				9589E90E22E3A7A900B3E88D /* LaunchScreen.storyboard */,
-				9589E91122E3A7A900B3E88D /* Info.plist */,
+				9544D07722E3A8FF00DAD2EE /* Words Matching */,
+				9544D07B22E3A94000DAD2EE /* Assets */,
 			);
 			path = "Translations Demo";
 			sourceTree = "<group>";
@@ -214,7 +250,7 @@
 			files = (
 				9589E91022E3A7A900B3E88D /* LaunchScreen.storyboard in Resources */,
 				9589E90D22E3A7A900B3E88D /* Assets.xcassets in Resources */,
-				9589E90B22E3A7A800B3E88D /* Main.storyboard in Resources */,
+				9589E90B22E3A7A800B3E88D /* WordsMatching.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9589E90822E3A7A800B3E88D /* ViewController.swift in Sources */,
 				9589E90622E3A7A800B3E88D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,12 +338,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9589E90922E3A7A800B3E88D /* Main.storyboard */ = {
+		9589E90922E3A7A800B3E88D /* WordsMatching.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9589E90A22E3A7A800B3E88D /* Base */,
 			);
-			name = Main.storyboard;
+			name = WordsMatching.storyboard;
 			sourceTree = "<group>";
 		};
 		9589E90E22E3A7A900B3E88D /* LaunchScreen.storyboard */ = {
@@ -452,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msm.Translations-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msm.Translations-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
