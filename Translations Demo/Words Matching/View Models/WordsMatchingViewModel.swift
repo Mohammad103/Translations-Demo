@@ -19,7 +19,7 @@ class WordsMatchingViewModel {
     weak var delegate: WordsMatchingViewModelDelegate?
     
     private var words: [Word] = []
-    private var selectedIndex: Int = 0
+    private var selectedIndex: Int = -1
     private var selectedWord: Word?
     private var wordsToChooseFrom: [Word] = []
     
@@ -47,7 +47,7 @@ class WordsMatchingViewModel {
     // Datasource methods
     
     private func prepareWordsForNewGame() {
-        selectedIndex = 0
+        selectedIndex = -1
         wordsToChooseFrom = []
         
         // Pick random word
@@ -79,13 +79,12 @@ class WordsMatchingViewModel {
     }
     
     func nextWordSpanishTranslation() -> String? {
+        incrementSelectedWordIndex()
         if selectedIndex < 0 || selectedIndex >= wordsToChooseFrom.count {
             return nil
         }
         
-        let spanishText = wordsToChooseFrom[selectedIndex].spanishText
-        incrementSelectedWordIndex()
-        return spanishText
+        return wordsToChooseFrom[selectedIndex].spanishText
     }
     
     func isWordsMatched() -> Bool {

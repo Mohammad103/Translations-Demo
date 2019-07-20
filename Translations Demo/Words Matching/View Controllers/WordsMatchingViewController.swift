@@ -36,16 +36,29 @@ class WordsMatchingViewController: UIViewController {
         }
     }
     
+    private func handleWrongAnswer() {
+        let animationDuration = 0.5
+        spanishTextButton.shake(duration: animationDuration, values: [-12.0, 12.0, -12.0, 12.0, -6.0, 6.0, -3.0, 3.0, 0.0])
+        DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) { [unowned self] in
+            self.setNextSpanishTranslation()
+        }
+    }
+    
+    private func handleRightAnswer() {
+        let alertController = UIAlertController(title: nil, message: "Matched! Next word?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { [unowned self] (action) in
+            self.wordsUpdatedSuccessfully()
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func spanishTextButtonTapped() {
         timerLabel.cancel()
         if viewModel.isWordsMatched() {
-            
+            handleRightAnswer()
         } else {
-            let animationDuration = 0.5
-            spanishTextButton.shake(duration: animationDuration, values: [-12.0, 12.0, -12.0, 12.0, -6.0, 6.0, -3.0, 3.0, 0.0])
-            DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) { [unowned self] in
-                self.setNextSpanishTranslation()
-            }
+            handleWrongAnswer()
         }
     }
 }
@@ -59,6 +72,8 @@ extension WordsMatchingViewController: WordsMatchingViewModelDelegate {
     
     func failedLoadingWords(errorMessage: String) {
         let alertController = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
 }
