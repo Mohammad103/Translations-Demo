@@ -1,16 +1,20 @@
 PODS:
   - CountdownLabel (4.0.1)
+  - JRMFloatingAnimation (0.1.2)
 
 DEPENDENCIES:
   - CountdownLabel
+  - JRMFloatingAnimation
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CountdownLabel
+    - JRMFloatingAnimation
 
 SPEC CHECKSUMS:
   CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
+  JRMFloatingAnimation: f8a03be20d841dac0022f04edcd20df049319f4d
 
-PODFILE CHECKSUM: 33154dbfa12c2a2d5840a57f17f57ad5b5a7dce1
+PODFILE CHECKSUM: 27515ed7ccf0e4805c2fe98f04a4174eaca2bc83
 
 COCOAPODS: 1.7.4

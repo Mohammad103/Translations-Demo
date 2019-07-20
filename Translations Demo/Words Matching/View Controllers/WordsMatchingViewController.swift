@@ -8,6 +8,7 @@
 
 import UIKit
 import CountdownLabel
+import JRMFloatingAnimation
 
 class WordsMatchingViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class WordsMatchingViewController: UIViewController {
     @IBOutlet weak var timerLabel: CountdownLabel!
     
     private var viewModel = WordsMatchingViewModel()
+    private var floatingAnimationView: JRMFloatingAnimationView!
+    private var floatingAnimationTimer: Timer!
     
     
     override func viewDidLoad() {
@@ -44,9 +47,31 @@ class WordsMatchingViewController: UIViewController {
         }
     }
     
+    @objc private func animateFloatingAnimationView() {
+        floatingAnimationView.animate()
+    }
+    
     private func handleRightAnswer() {
+        floatingAnimationView = JRMFloatingAnimationView(starting: CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height + 100))
+        floatingAnimationView.startingPointWidth = view.frame.size.width
+        floatingAnimationView.animationWidth = 75
+        floatingAnimationView.maxFloatObjectSize = 75
+        floatingAnimationView.minFloatObjectSize = 75
+        floatingAnimationView.animationDuration = 3.0
+        floatingAnimationView.maxAnimationHeight = floatingAnimationView.maxAnimationHeight - 64
+        floatingAnimationView.minAnimationHeight = floatingAnimationView.maxAnimationHeight
+        floatingAnimationView.removeOnCompletion = true
+        floatingAnimationView.add(UIImage(named: "blue_balloon"))
+        view.addSubview(floatingAnimationView)
+        floatingAnimationTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(animateFloatingAnimationView), userInfo: nil, repeats: true)
+        
+        
         let alertController = UIAlertController(title: nil, message: "Matched! Next word?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { [unowned self] (action) in
+            self.floatingAnimationTimer.invalidate()
+            self.floatingAnimationTimer = nil
+            self.floatingAnimationView.removeFromSuperview()
+            self.floatingAnimationView = nil
             self.wordsUpdatedSuccessfully()
         }
         alertController.addAction(okAction)

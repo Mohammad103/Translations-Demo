@@ -7,6 +7,7 @@ target 'Translations Demo' do
   inhibit_all_warnings!
 
   pod 'CountdownLabel'
+  pod 'JRMFloatingAnimation'
 
   target 'Translations DemoTests' do
     inherit! :search_paths
