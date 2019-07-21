@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="words_matching_background" translatesAutoresizingMaskIntoConstraints="NO" id="Dap-vn-Ubv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="words_matching_background" translatesAutoresizingMaskIntoConstraints="NO" id="Dap-vn-Ubv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the flying text to choose the right translation" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-hi-FTy">
@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.93333333330000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="HAK-D9-1cZ" firstAttribute="top" secondItem="AMc-6w-Yhs" secondAttribute="top" constant="10" id="18X-Yf-li8"/>
                                     <constraint firstItem="HAK-D9-1cZ" firstAttribute="leading" secondItem="AMc-6w-Yhs" secondAttribute="leading" constant="16" id="QFf-Dg-wxb"/>
@@ -43,9 +43,9 @@
                                     <constraint firstAttribute="bottom" secondItem="HAK-D9-1cZ" secondAttribute="bottom" constant="10" id="fRs-7w-dVi"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52j-Lz-Vvi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52j-Lz-Vvi">
                                 <rect key="frame" x="228.5" y="52" width="165.5" height="40"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.93333333330000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="irw-SR-sXi"/>
                                 </constraints>
@@ -92,6 +92,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="words_matching_background" width="2474" height="2000"/>
+        <image name="words_matching_background" width="1000" height="999"/>
     </resources>
 </document>
