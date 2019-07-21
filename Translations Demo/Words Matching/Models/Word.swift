@@ -34,4 +34,11 @@ struct Word {
         }
         return words
     }
+    
+    static func ==(word1: Word, word2: Word) -> Bool {
+        if word1.englishText == word2.englishText && word1.spanishText == word2.spanishText {
+            return true
+        }
+        return false
+    }
 }

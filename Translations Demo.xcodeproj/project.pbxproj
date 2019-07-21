@@ -13,11 +13,13 @@
 		9544D08322E3ABD600DAD2EE /* WordsMatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08222E3ABD600DAD2EE /* WordsMatchingViewModel.swift */; };
 		9544D08522E3B17500DAD2EE /* WordsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08422E3B17500DAD2EE /* WordsMatchingViewController.swift */; };
 		9544D08922E3C68000DAD2EE /* UIViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08822E3C68000DAD2EE /* UIViewUtilities.swift */; };
+		9544D08B22E3E5DE00DAD2EE /* WordsMatchingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08A22E3E5DE00DAD2EE /* WordsMatchingViewControllerTests.swift */; };
+		9544D08D22E3E74000DAD2EE /* WordsMatchingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08C22E3E74000DAD2EE /* WordsMatchingViewModelTests.swift */; };
+		9544D08F22E3EC6A00DAD2EE /* WordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544D08E22E3EC6A00DAD2EE /* WordTests.swift */; };
 		9589E90622E3A7A800B3E88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E90522E3A7A800B3E88D /* AppDelegate.swift */; };
 		9589E90B22E3A7A800B3E88D /* WordsMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90922E3A7A800B3E88D /* WordsMatching.storyboard */; };
 		9589E90D22E3A7A900B3E88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90C22E3A7A900B3E88D /* Assets.xcassets */; };
 		9589E91022E3A7A900B3E88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589E90E22E3A7A900B3E88D /* LaunchScreen.storyboard */; };
-		9589E91B22E3A7A900B3E88D /* Translations_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589E91A22E3A7A900B3E88D /* Translations_DemoTests.swift */; };
 		E5C7FD58C2081A17AF465348 /* Pods_Translations_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BB5B1081F8ACB0FCDC8BE7 /* Pods_Translations_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,9 @@
 		9544D08222E3ABD600DAD2EE /* WordsMatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewModel.swift; sourceTree = "<group>"; };
 		9544D08422E3B17500DAD2EE /* WordsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewController.swift; sourceTree = "<group>"; };
 		9544D08822E3C68000DAD2EE /* UIViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtilities.swift; sourceTree = "<group>"; };
+		9544D08A22E3E5DE00DAD2EE /* WordsMatchingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewControllerTests.swift; sourceTree = "<group>"; };
+		9544D08C22E3E74000DAD2EE /* WordsMatchingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsMatchingViewModelTests.swift; sourceTree = "<group>"; };
+		9544D08E22E3EC6A00DAD2EE /* WordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTests.swift; sourceTree = "<group>"; };
 		9589E90222E3A7A800B3E88D /* Translations Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Translations Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9589E90522E3A7A800B3E88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9589E90A22E3A7A800B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WordsMatching.storyboard; sourceTree = "<group>"; };
@@ -45,7 +50,6 @@
 		9589E90F22E3A7A900B3E88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9589E91122E3A7A900B3E88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9589E91622E3A7A900B3E88D /* Translations DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Translations DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9589E91A22E3A7A900B3E88D /* Translations_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations_DemoTests.swift; sourceTree = "<group>"; };
 		9589E91C22E3A7A900B3E88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9239BED51915A78F7B4485 /* Pods-Translations DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translations DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-Translations DemoTests/Pods-Translations DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C34B947D8F4635E60EA40590 /* Pods-Translations DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translations DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Translations DemoTests/Pods-Translations DemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +186,9 @@
 		9589E91922E3A7A900B3E88D /* Translations DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				9589E91A22E3A7A900B3E88D /* Translations_DemoTests.swift */,
+				9544D08E22E3EC6A00DAD2EE /* WordTests.swift */,
+				9544D08C22E3E74000DAD2EE /* WordsMatchingViewModelTests.swift */,
+				9544D08A22E3E5DE00DAD2EE /* WordsMatchingViewControllerTests.swift */,
 				9589E91C22E3A7A900B3E88D /* Info.plist */,
 			);
 			path = "Translations DemoTests";
@@ -369,7 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9589E91B22E3A7A900B3E88D /* Translations_DemoTests.swift in Sources */,
+				9544D08F22E3EC6A00DAD2EE /* WordTests.swift in Sources */,
+				9544D08B22E3E5DE00DAD2EE /* WordsMatchingViewControllerTests.swift in Sources */,
+				9544D08D22E3E74000DAD2EE /* WordsMatchingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

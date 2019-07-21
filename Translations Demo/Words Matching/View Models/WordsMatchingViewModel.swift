@@ -88,7 +88,10 @@ class WordsMatchingViewModel {
     }
     
     func isWordsMatched() -> Bool {
-        if selectedWord?.englishText == wordsToChooseFrom[selectedIndex].englishText && selectedWord?.spanishText == wordsToChooseFrom[selectedIndex].spanishText {
+        if selectedWord == nil {
+            return false
+        }
+        if selectedWord! == wordsToChooseFrom[selectedIndex] {
             return true
         }
         return false
