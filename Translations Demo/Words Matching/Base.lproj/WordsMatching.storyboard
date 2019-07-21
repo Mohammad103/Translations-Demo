@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.93333333330000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.55294117647058827" blue="0.082352941176470587" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="HAK-D9-1cZ" firstAttribute="top" secondItem="AMc-6w-Yhs" secondAttribute="top" constant="10" id="18X-Yf-li8"/>
                                     <constraint firstItem="HAK-D9-1cZ" firstAttribute="leading" secondItem="AMc-6w-Yhs" secondAttribute="leading" constant="16" id="QFf-Dg-wxb"/>
@@ -45,7 +45,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52j-Lz-Vvi">
                                 <rect key="frame" x="228.5" y="52" width="165.5" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.93333333330000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.55294117647058827" blue="0.082352941176470587" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="irw-SR-sXi"/>
                                 </constraints>

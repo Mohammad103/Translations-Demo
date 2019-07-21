@@ -87,7 +87,7 @@ class WordsMatchingViewController: UIViewController {
         floatingAnimationView.maxAnimationHeight = floatingAnimationView.maxAnimationHeight + 60
         floatingAnimationView.minAnimationHeight = floatingAnimationView.maxAnimationHeight
         floatingAnimationView.removeOnCompletion = true
-        floatingAnimationView.add(UIImage(named: "blue_balloon"))
+        floatingAnimationView.add(UIImage(named: "red_balloon"))
         view.addSubview(floatingAnimationView)
         floatingAnimationTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(animateFloatingAnimationView), userInfo: nil, repeats: true)
     }
